@@ -1,0 +1,8 @@
+html{box-sizing:border-box}*,::after,::before{box-sizing:inherit}body{margin:0;padding:0}ol,ul{list-style:none;margin:0;padding:0}a{text-decoration:none;color:inherit}
+
+html {
+    font-size: 18px;
+}
+nav {
+    font-family: sans-serif;
+}

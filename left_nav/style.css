@@ -1,0 +1,38 @@
+img {
+    width: 200px;
+}
+
+#nav {
+    background: #333;
+    color: #fff;
+    max-width: 500px;
+    height: 100vh;
+    padding: 50px;
+}
+.nav-container-link {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.box-modal {
+    max-height: 0;
+    overflow-y: hidden;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    transition: max-height 0.5s ease-in-out, padding .8s ease-in-out; 
+}
+.box-modal--active {
+    max-height: 100%;
+    padding: 25px;
+transition: max-height 1.2s ease-in-out, padding .5s ease-in-out; 
+}
+.arrow--active {
+    rotate: -90deg;
+}
+.nav-parent-list {
+    display: flex;
+}
+
