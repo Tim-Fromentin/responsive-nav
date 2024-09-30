@@ -1,0 +1,91 @@
+
+
+#nav {
+    background: #333;
+    color: white;
+    padding: 25px 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.nav-container-link {
+    margin-top: 25px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-link {
+    position: relative;
+}
+.nav-link::before, .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 3px;
+    bottom: -3px;
+    background: #ffffff;
+    transition: width .3s ease-in-out;
+}
+.nav-link::after {
+    right: 0;
+}
+.nav-link::before {
+    left: 0;
+}
+.nav-link:hover::before, .nav-link:hover::after {
+    width: calc(50% + 1px)
+}
+
+.btn-hamb {
+    height: 50px;
+    width: 50px;
+    position: relative;
+    margin-top: 50px;
+}
+.btn-hamb .line {
+    height: 3px;
+    width: 100%;
+    background: #ffffff;
+    position: absolute;
+    transition: rotate .4s ease-in-out, opacity .4s ease;
+}
+.btn-hamb .line:nth-child(1) {
+    top: 0;
+}
+.btn-hamb .line:nth-child(2) {
+    top: 50%;
+    transform: translateY(-50%);
+}
+.btn-hamb .line:nth-child(3) {
+    bottom: 0;
+}
+
+
+
+
+
+@media screen and (max-width: 600px) {
+    #nav {
+        padding: 25px;
+    }
+}
+@media screen and (max-width: 425px) {
+    .nav-container-link {
+        height: 0;
+        overflow: hidden;
+        width: 0;
+        transition: height .8s ease;
+    }
+}
+
+
+.nav-container-link--active {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 187px - 25px);
+    bottom: 0;
+    padding: 50px 0;
+}
