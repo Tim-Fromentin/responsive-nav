@@ -43,6 +43,7 @@
     width: 50px;
     position: relative;
     margin-top: 50px;
+    display: none;
 }
 .btn-hamb .line {
     height: 3px;
@@ -77,6 +78,9 @@
         overflow: hidden;
         width: 0;
         transition: height .8s ease;
+    }
+    .btn-hamb {
+        display: block;
     }
 }
 
